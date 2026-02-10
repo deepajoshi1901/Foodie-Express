@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FoodieExpress</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN PAGE -->
+<div id="loginPage" class="login-body">
+  <div class="login-box animate-scale">
+    <h2>🍽️ FoodieExpress</h2>
+    <input type="text" placeholder="Username">
+    <input type="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+  </div>
+</div>
+
+<!-- MAIN WEBSITE -->
+<div id="mainPage" style="display:none;">
+
+  <!-- NAVBAR -->
+  <nav class="animate-nav">
+    <h2>🍔 FoodieExpress</h2>
+    <ul>
+      <li onclick="showPage('home', this)">Home</li>
+      <li onclick="showPage('chinese', this)">Chinese</li>
+      <li onclick="showPage('south', this)">South Indian</li>
+      <li onclick="showPage('indian', this)">Indian</li>
+      <li onclick="showPage('cart', this)">Cart / Billing</li>
+    </ul>
+  </nav>
+
+  <!-- HOME -->
+  <section id="home" class="page home">
+    <div class="overlay"></div>
+
+    <div class="home-content animate-fade">
+      <h1>Delicious Food Delivered 😋</h1>
+      <p>Fresh • Fast • Affordable</p>
+    </div>
+
+    <!-- ABOUT (sirf Home) -->
+    <div class="about animate-up">
+      <h2>About FoodieExpress</h2>
+      <p>
+        FoodieExpress delivers hygienic and tasty food from trusted kitchens.
+        Customer satisfaction is our first priority.
+      </p>
+    </div>
+  </section>
+
+  <!-- CHINESE -->
+  <section id="chinese" class="page bg-page">
+    <div class="overlay"></div>
+    <h2>🍜 Chinese Food</h2>
+    <div class="food-list">
+      <div class="food-card"><img src="noodels.jpg"><h3>Noodles</h3><p>₹180</p><button onclick="addToCart('Noodles',180)">Add</button></div>
+      <div class="food-card"><img src="Manchurian.jpg"><h3>Manchurian</h3><p>₹160</p><button onclick="addToCart('Manchurian',160)">Add</button></div>
+      <div class="food-card"><img src="momos.jpg"><h3>Momos</h3><p>₹120</p><button onclick="addToCart('Momos',120)">Add</button></div>
+      <div class="food-card"><img src="pasta.jpg"><h3>Pasta</h3><p>₹200</p><button onclick="addToCart('Pasta',200)">Add</button></div>
+    </div>
+  </section>
+
+  <!-- SOUTH -->
+  <section id="south" class="page bg-page">
+    <div class="overlay"></div>
+    <h2>🥞 South Indian</h2>
+    <div class="food-list">
+      <div class="food-card"><img src="Idli (2).jpg"><h3>Idli</h3><p>₹60</p><button onclick="addToCart('Idli',60)">Add</button></div>
+      <div class="food-card"><img src="Dhosa (2).jpg"><h3>Dosa</h3><p>₹90</p><button onclick="addToCart('Dosa',90)">Add</button></div>
+      <div class="food-card"><img src="vada.jpg"><h3>Vada</h3><p>₹70</p><button onclick="addToCart('Vada',70)">Add</button></div>
+      <div class="food-card"><img src="sambhar.jpg"><h3>Sambhar</h3><p>₹50</p><button onclick="addToCart('Sambhar',50)">Add</button></div>
+    </div>
+  </section>
+
+  <!-- INDIAN -->
+  <section id="indian" class="page bg-page">
+    <div class="overlay"></div>
+    <h2>🍛 Indian Food</h2>
+    <div class="food-list">
+      <div class="food-card"><img src="Paneer (2).jpg"><h3>Paneer Sabji</h3><p>₹220</p><button onclick="addToCart('Paneer Sabji',220)">Add</button></div>
+      <div class="food-card"><img src="Roti.jpg"><h3>Roti</h3><p>₹15</p><button onclick="addToCart('Roti',15)">Add</button></div>
+      <div class="food-card"><img src="chole bhature.jpg"><h3>Chole Bhature</h3><p>₹150</p><button onclick="addToCart('Chole Bhature',150)">Add</button></div>
+    </div>
+  </section>
+
+  <!-- CART -->
+  <section id="cart" class="page">
+    <h2>🛒 Billing</h2>
+    <ul id="cartItems"></ul>
+    <h3>Total: ₹<span id="total">0</span></h3>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <h3>🍽️ FoodieExpress</h3>
+    <p>📞 +91 7489861120</p>
+    <p>📧 foodieexpress@gmail.com</p>
+    <p>© 2026 FoodieExpress</p>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
